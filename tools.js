@@ -1,7 +1,7 @@
 /** random int
-    min : include
-    max : exclude
-    operator : 0 max exclude || 1  max include
+* @param {*} min : min int value include
+* @param {*} max : max int value exclude
+* @param operator : 0 max exclude (default) - 1  max include
 **/
 function getRandomInt(min, max, operator = 0) {
     min = Math.ceil(min);
@@ -10,26 +10,42 @@ function getRandomInt(min, max, operator = 0) {
 }
 
 /** random float
-    min : include
-    max : exclude
-    operator : 0 max exclude - 1  max include
+* @param {*} min : min value include
+* @param {*} max : max value exclude
+* @param operator : 0 max exclude (default) - 1  max include
 **/
 function getRandom(min, max, operator = 0) {
     return Math.random() * (max - min + operator) + min;
 }
 
 /** random array
-    array : array
+* @param {*} values  array of values to pick from
 **/
-function getRandomArray(array) {
-    return array[Math.floor(Math.random() * array.length)];
+function getRandomArray(values) {
+    return values[Math.floor(Math.random() * values.length)];
 }
 
 /** lerp
-    start - target - step
-**/
+* Return a value between start and target based on current step in range [0...1]
+* @param {*} start min value
+* @param {*} target max value
+* @param {*} step in range [0...1]
+*/
 function lerp(start, target, step){
-    return (1-step)*start + step*target;
+    if (step < 0) return start;
+    if (step > 1) return target;
+    return (1-step)*start + step * target;
+}
+
+/** lerpArray
+* Return a value from an array of values based on current step in range [0...1]
+* @param {*} values array of values to pick from
+* @param {*} step in range [0...1]
+*/
+export function lerpArray(values, step) {
+    if (step < 0) return values[0];
+    if (step > 1) return values[values.length - 1];
+    return values[Math.floor((values.length - 1) * step)];
 }
 
 /** mapRange
