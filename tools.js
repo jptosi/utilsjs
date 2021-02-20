@@ -12,12 +12,13 @@ function lerp(start, target, step){
 
 /** lerpArray
 * Return a value from an array of values based on current step in range [0...1]
-* @param {*} values array of values to pick from
+* @param {*} arr array of values to pick from
 * @param {*} step in range [0...1]
+* @return {any} member of array
 */
-export function lerpArray(values, step) {
-    if (step < 0) return values[0];
-    if (step > 1) return values[values.length - 1];
+export function lerpArray(arr, step) {
+    if (step < 0) return arr[0];
+    if (step > 1) return arr[arr.length - 1];
     return values[Math.floor((values.length - 1) * step)];
 }
 
