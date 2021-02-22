@@ -1,7 +1,7 @@
 /** random int
 * @param {*} min : min int value include
 * @param {*} max : max int value exclude
-* @param operator : 0 max exclude (default) - 1  max include
+* @param operator : 0 max exclude (default) / 1 max include
 * @return {{number} random int
 **/
 function getRandomInt(min, max, operator = 0) {
@@ -13,7 +13,7 @@ function getRandomInt(min, max, operator = 0) {
 /** random float
 * @param {*} min : min value include
 * @param {*} max : max value exclude
-* @param operator : 0 max exclude (default) - 1  max include
+* @param operator : 0 max exclude (default) / 1 max include
 * @return {number} random float
 **/
 function getRandom(min, max, operator = 0) {
