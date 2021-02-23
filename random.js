@@ -2,7 +2,7 @@
 * @param {*} min : min int value include
 * @param {*} max : max int value exclude
 * @param operator : 0 max exclude (default) / 1 max include
-* @return {{number} random int
+* @return {number} random int
 **/
 function getRandomInt(min, max, operator = 0) {
     min = Math.ceil(min);
