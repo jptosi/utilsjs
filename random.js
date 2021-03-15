@@ -1,7 +1,7 @@
 /** random int
-* @param {*} min : min int value include
-* @param {*} max : max int value exclude
-* @param operator : 0 max exclude (default) / 1 max include
+* @param {int} min : min int value include
+* @param {int} max : max int value exclude
+* @param {0 | 1} operator : 0 max exclude (default) / 1 max include
 * @return {number} random int
 **/
 function getRandomInt(min, max, operator = 0) {
@@ -11,8 +11,8 @@ function getRandomInt(min, max, operator = 0) {
 }
 
 /** random float
-* @param {*} min : min value include
-* @param {*} max : max value exclude
+* @param {float} min : min value include
+* @param {float} max : max value exclude
 * @param operator : 0 max exclude (default) / 1 max include
 * @return {number} random float
 **/
@@ -21,7 +21,7 @@ function getRandom(min, max, operator = 0) {
 }
 
 /** random from an array
-* @param {*} arr  array of values to pick from
+* @param {array} arr  array of values to pick from
 * @return {any} random member of array
 **/
 function getRandomArray(arr) {
